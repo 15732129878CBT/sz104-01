@@ -1,1 +1,7 @@
 压顶二碘酪氨酸不需要32454
+    @GetMapping("/list")
+    public String save(Model model) {
+        List<Items> list = itemsService.findAll();
+        model.addAttribute("items", list);
+        return "items";
+    }
